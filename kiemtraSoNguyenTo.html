@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(num) {
+        let checkprime = true;
+        if (num < 2) {
+            checkprime = false;
+        }
+        for (let i = 2; i <num-1; i++) {
+            if (num % i == 0) {
+                checkprime = false;
+                break;
+            } else
+                checkprime = true;
+        }
+        return checkprime;
+    }
+    function listPrime() {
+        let prime=[];
+        for (i=1; i<10000; i++) {
+            if (isPrime(i) == true) {
+                prime.push(i);
+            }
+        }
+        return prime;
+    }
+    document.write(listPrime())
+</script>
+</body>
+</html>
